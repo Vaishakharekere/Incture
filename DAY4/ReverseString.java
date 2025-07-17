@@ -10,11 +10,16 @@ public class ReverseString {
 		StringBuffer S=new StringBuffer();
 	String str=sc.nextLine();
 	String []arr=str.split(" ");
-		for (String string : arr) {
-			S.append(string+" ");
+	int a=arr.length;
+	while(a-1>=0) {
+		S.append(arr[a-1]);
+		S.append(" ");
+		a--;
+	}
+		
+	System.out.println(S);
 		}
-		S.reverse();
-		System.out.println(S);
+		
 	}
 
-}
+
