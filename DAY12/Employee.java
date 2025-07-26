@@ -22,7 +22,7 @@ public Employee( String name, double Salary) {
 }
 @Override
 public String toString() {
-	return "name=" + name + "earns Rs." + Salary;
+	return  name + " earns Rs. " + Salary;
 }
 
 

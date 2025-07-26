@@ -2,6 +2,7 @@ package com.demo.DAY12;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.function.Function;
 
 public class EMS {
@@ -18,7 +19,12 @@ public class EMS {
 		Function<Employee, Double> Func = i -> i.getSalary() * 1.16;
 		
 		for (Employee employee : TS) {
-			Func.apply(employee);
+		    double newSalary = Func.apply(employee);
+		    employee.setSalary(newSalary); // update the salary
+		}
+		Iterator<Employee> E=TS.iterator();
+		while(E.hasNext()){
+			System.out.println(E.next());
 		}
 
 
